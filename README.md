@@ -2,7 +2,9 @@
 本项目通过 COOL 语言的面向对象特性（继承、多态、组合），实现了三种基础数据结构，其中主要实现了栈的数据结构
 
 链表（List）：作为底层存储，通过抽象基类List+ 具体子类Cons（非空节点）、Nil（空节点）实现动态数据存储；
+
 栈（Stack）：基于链表封装 “后进先出（LIFO）” 逻辑，提供push/pop/peek/isEmpty/print等操作；
+
 二叉搜索树（BST）：通过TreeNode类实现节点插入、从栈构建树、先序遍历（根→左→右），遵循 “左子树 < 根 < 右子树” 规则。
 
 整体流程：从栈中读取数据构建二叉搜索树，最终通过先序遍历验证树的正确性。
@@ -14,18 +16,27 @@
 
 运行步骤
 下载VMWare Workstation
+
 下载ubuntu-22.04.5-desktop-amd64
+
 新建虚拟机ubuntu
+
 可通过包管理器安装（如apt install coolc spim，或参考 COOL 语言官方教学环境配置）；
+
 编译 COOL 代码：在ubuntu终端使用coolc将stack.cl编译为 MIPS 汇编文件stack.s：
+
 coolc stack.cl
 运行汇编代码：使用spim执行编译生成的.s文件，查看程序输出：
+
 spim stack.s
 
 核心功能说明
 数据结构	核心功能	实现逻辑
+
 链表	头部插入、获取首元素、获取剩余链表	List定义抽象接口，Cons实现非空链表逻辑，Nil作为空链表终止标志
+
 栈	入栈（push）、出栈（pop）、查看栈顶（peek）、打印栈	基于链表的头部操作实现 LIFO，push调用链表cons，pop调用链表head+tail
+
 二叉搜索树	节点插入、从栈构建树、先序遍历	插入遵循 BST 规则（左小右大），从栈弹出元素递归插入，遍历按 “根→左→右” 顺序
 
 核心类职责
