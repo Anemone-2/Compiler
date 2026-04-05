@@ -1,0 +1,26 @@
+SPIM Version 6.5 of January 4, 2003
+Copyright 1990-2003 by James R. Larus (larus@cs.wisc.edu).
+All Rights Reserved.
+See the file README for a full copyright notice.
+Loaded: ../lib/trap.handler
+static dispatch is right
+int default initializer is right
+string default initializer is right
+bool default initializer is right
+inheritance is right
+loop is right
+lt is right
+neg is right
+eq is right
+comp is right
+isvoid is right
+case on primitive type is right
+case on class instance is right
+case on self is right
+class int default value is right
+class string default value is right
+class bool default value is right
+let expression int default value is right
+let expression string default value is right
+let expression bool default value is right
+COOL program successfully executed
