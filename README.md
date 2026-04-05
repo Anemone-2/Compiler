@@ -1,1 +1,9 @@
-COOL Compiler Implementation (Stanford CS143)A complete, multi-stage compiler for COOL (Classroom Object Oriented Language), targeting MIPS assembly. This project covers the full compilation pipeline, from raw source code to executable machine instructions.📂 Project ArchitectureThe compiler is implemented in five progressive phases, each building upon the previous one to transform high-level object-oriented code into low-level assembly.PhaseModuleKey TechnologiesDescriptionPA1Stack MachineCOOL, Stack ArchitectureImplemented a basic stack-based emulator to understand COOL's runtime logic.PA2Lexical AnalyzerFlex, Regular ExpressionsScans source code into a stream of valid tokens using finite automata.PA3Syntax AnalyzerBison, LALR ParsingConstructs an Abstract Syntax Tree (AST) from tokens based on Context-Free Grammars.PA4Semantic AnalysisC++, Type InferencePerforms recursive type checking, scope validation, and inheritance graph analysis.PA5Code GeneratorMIPS, Assembly, RuntimeTranslates the AST into MIPS assembly, managing memory layout and dynamic dispatch.
+COOL 语言编译器实现 (Stanford CS143)本项目是一个完整的 COOL (Classroom Object Oriented Language) 编译器实现过程，目标架构为 MIPS 汇编。项目涵盖了从源代码字符流到可执行机器指令的完整编译流水线。
+
+📂 项目架构整个开发过程分为五个核心阶段，每个阶段都在其对应的子目录中，展示了编译器从前端到后端的转化逻辑：阶段模块名称核心技术功能描述
+PA1栈机模拟 (Stack Machine)COOL, 栈架构实现了一个基础的栈式模拟器，用于熟悉 COOL 语言的运行时逻辑。
+PA2词法分析 (Lexical Analyzer)Flex, 正则表达式利用有限自动机将源代码扫描并切分为有效的 Token 流。
+PA3语法分析 (Syntax Analyzer)Bison, LALR 分析基于上下文无关文法，将 Token 流构建为 抽象语法树 (AST)。
+PA4语义分析 (Semantic Analysis)C++, 类型推导进行递归类型检查、作用域验证以及复杂的继承图分析。
+PA5代码生成 (Code Generation)MIPS, 运行时系统将 AST 翻译为 MIPS 汇编指令，管理内存布局和动态分派。
+🛠️ 技术栈开发语言: C++, COOL核心工具: Flex (词法扫描器), Bison (语法分析生成器), SPIM (MIPS 模拟器)开发环境: Linux / Ubuntu (基于 Makefile 的自动化构建)
